@@ -102,6 +102,7 @@ export const TransactionProvider = ({ children }) => {
         method: "eth_requestAccounts",
       });
       setCurrentAccount(accounts[0]);
+      getAllTransactions();
     } catch (error) {
       console.log(error);
       throw new Error("No ethereum object");
